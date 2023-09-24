@@ -104,11 +104,9 @@
 #define EXAMPLE_NETIF_INIT_FN ethernetif0_init
 #endif /* EXAMPLE_NETIF_INIT_FN */
 
-//to-do: change to actual broker address.
 /*! @brief MQTT server host name or IP address. */
 #define EXAMPLE_MQTT_SERVER_HOST "broker.hivemq.com"
 
-//to-do: change to actual broker port
 /*! @brief MQTT server port number. */
 #define EXAMPLE_MQTT_SERVER_PORT 1883
 
@@ -364,15 +362,13 @@ static void mqtt_message_published_cb(void *arg, err_t err)
  */
 static void publish_message(void *ctx)
 {
-    static const char *topic[]   = {light_1_state_topic, light_2_state_topic};
-
     LWIP_UNUSED_ARG(ctx);
 
     //carlosa: publish lights state
-    PRINTF("Going to publish to the topic \"%s\"...\r\n", topic[0]);
-    mqtt_publish(mqtt_client, topic[0], &light_1_state, sizeof(light_1_state), 1, 1, mqtt_message_published_cb, (void *)topic[0]);
-    PRINTF("Going to publish to the topic \"%s\"...\r\n", topic[1]);
-    mqtt_publish(mqtt_client, topic[1], &light_2_state, sizeof(light_2_state), 1, 1, mqtt_message_published_cb, (void *)topic[1]);
+    PRINTF("Going to publish to the topic \"%s\"...\r\n", light_1_state_topic);
+    mqtt_publish(mqtt_client, light_1_state_topic, &light_1_state, sizeof(light_1_state), 1, 1, mqtt_message_published_cb, (void *)light_1_state_topic);
+    PRINTF("Going to publish to the topic \"%s\"...\r\n", light_2_state_topic);
+    mqtt_publish(mqtt_client, light_2_state_topic, &light_2_state, sizeof(light_2_state), 1, 1, mqtt_message_published_cb, (void *)light_2_state_topic);
 }
 
 static void publish_message_connected(void *ctx)
@@ -630,7 +626,7 @@ static void set_light_command(){
 	//turn off all lights in light_command seconds
 	else if (topic_index == function_shutoff_time){
 
-		PRINTF("Turning of lights. \n");
+		PRINTF("Turning off lights. \n");
 		vTaskDelay(light_command*1000);
 		GPIO_PortClear(light_1_GPIO, 1u << light_1_GPIO_PIN);
 		GPIO_PortClear(light_2_GPIO, 1u << light_2_GPIO_PIN);
