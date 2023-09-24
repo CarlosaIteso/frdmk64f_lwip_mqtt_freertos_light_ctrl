@@ -1,0 +1,5 @@
+C:\Users\guion\Documents\MCUXpressoIDE_11.8.0_1165\workspace\frdmk64f_lwip_mqtt_freertos_light_ctrl\drivers/fsl_clock.h:668:20:CLOCK_EnableClock	24	static
+C:\Users\guion\Documents\MCUXpressoIDE_11.8.0_1165\workspace\frdmk64f_lwip_mqtt_freertos_light_ctrl\drivers/fsl_port.h:271:20:PORT_SetPinConfig	32	static
+C:\Users\guion\Documents\MCUXpressoIDE_11.8.0_1165\workspace\frdmk64f_lwip_mqtt_freertos_light_ctrl\drivers/fsl_port.h:374:20:PORT_SetPinMux	24	static
+../board/pin_mux.c:37:6:BOARD_InitBootPins	8	static
+../board/pin_mux.c:76:6:BOARD_InitPins	32	static

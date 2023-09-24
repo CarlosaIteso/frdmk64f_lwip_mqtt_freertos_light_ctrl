@@ -1,0 +1,8 @@
+C:\Users\guion\Documents\MCUXpressoIDE_11.8.0_1165\workspace\frdmk64f_lwip_mqtt_freertos_light_ctrl\drivers/fsl_clock.h:668:20:CLOCK_EnableClock	24	static
+C:\Users\guion\Documents\MCUXpressoIDE_11.8.0_1165\workspace\frdmk64f_lwip_mqtt_freertos_light_ctrl\drivers/fsl_enet.h:970:24:ENET_ReadSMIData	16	static
+C:\Users\guion\Documents\MCUXpressoIDE_11.8.0_1165\workspace\frdmk64f_lwip_mqtt_freertos_light_ctrl\drivers/fsl_enet.h:1291:24:ENET_GetInterruptStatus	16	static
+C:\Users\guion\Documents\MCUXpressoIDE_11.8.0_1165\workspace\frdmk64f_lwip_mqtt_freertos_light_ctrl\drivers/fsl_enet.h:1310:20:ENET_ClearInterruptStatus	16	static
+../mdio/fsl_enet_mdio.c:46:13:ENET_MDIO_Init	32	static
+../mdio/fsl_enet_mdio.c:59:17:ENET_MDIO_Write	48	static
+../mdio/fsl_enet_mdio.c:83:17:ENET_MDIO_Read	40	static
+../mdio/fsl_enet_mdio.c:172:17:ENET_MDIO_WaitTransferOver	24	static
