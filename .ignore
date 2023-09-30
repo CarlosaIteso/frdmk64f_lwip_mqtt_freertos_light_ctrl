@@ -1,0 +1,11 @@
+# MCUXpresso IDE files
+.metadata/
+.settings/
+.cproject
+.project
+*.launch
+*.log
+
+# Build artifacts
+Debug/
+Release/

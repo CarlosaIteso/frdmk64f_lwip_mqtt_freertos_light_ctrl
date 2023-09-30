@@ -586,13 +586,13 @@ static void set_light_command(){
 
 		PRINTF("Setting command for light 1.\n");
 		if (light_command == command_off){
-			GPIO_PortClear(light_1_GPIO, 1u << light_1_GPIO_PIN);
+			GPIO_PortSet(light_1_GPIO, 1u << light_1_GPIO_PIN);
 
 			//carlosa: update light 1 state
 			light_1_state = '0';
 		}
 		else if (light_command == command_on){
-			GPIO_PortSet(light_1_GPIO, 1u << light_1_GPIO_PIN);
+			GPIO_PortClear(light_1_GPIO, 1u << light_1_GPIO_PIN);
 
 			//carlosa: update light 1 state
 			light_1_state = '1';
@@ -607,13 +607,13 @@ static void set_light_command(){
 
 		PRINTF("Setting command for light 2.\n");
 		if (light_command == command_off){
-			GPIO_PortClear(light_2_GPIO, 1u << light_2_GPIO_PIN);
+			GPIO_PortSet(light_2_GPIO, 1u << light_2_GPIO_PIN);
 
 			//carlosa: update light 2 state
 			light_2_state = '0';
 		}
 		else if (light_command == command_on){
-			GPIO_PortSet(light_2_GPIO, 1u << light_2_GPIO_PIN);
+			GPIO_PortClear(light_2_GPIO, 1u << light_2_GPIO_PIN);
 
 			//carlosa: update light 2 state
 			light_2_state = '1';
@@ -628,8 +628,8 @@ static void set_light_command(){
 
 		PRINTF("Turning off lights. \n");
 		vTaskDelay(light_command*1000);
-		GPIO_PortClear(light_1_GPIO, 1u << light_1_GPIO_PIN);
-		GPIO_PortClear(light_2_GPIO, 1u << light_2_GPIO_PIN);
+		GPIO_PortSet(light_1_GPIO, 1u << light_1_GPIO_PIN);
+		GPIO_PortSet(light_2_GPIO, 1u << light_2_GPIO_PIN);
 
 		light_1_state = '0';
 		light_2_state = '0';

@@ -170,15 +170,15 @@ void BOARD_InitPins(void)
     //carlosa: pin config for leds
     gpio_pin_config_t LED_RED_config = {
             .pinDirection = kGPIO_DigitalOutput,
-            .outputLogic = 0U
+            .outputLogic = 1U
         };
     gpio_pin_config_t LED_BLUE_config = {
                 .pinDirection = kGPIO_DigitalOutput,
-                .outputLogic = 0U
+                .outputLogic = 1U
 		};
     gpio_pin_config_t LED_GREEN_config = {
                     .pinDirection = kGPIO_DigitalOutput,
-                    .outputLogic = 0U
+                    .outputLogic = 1U
     		};
 
 	/* Initialize GPIO functionality on pin PTB22 (pin 68)  */
